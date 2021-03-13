@@ -1,0 +1,20 @@
+{
+  "name": "docler",
+  "version": "1.0.0",
+  "description": "Proof of Concept for Docler Holding",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.6.0",
+    "cypress-cucumber-preprocessor": "^4.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+
+    "nonGlobalStepDefinitions": true
+  }
+}
