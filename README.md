@@ -2,6 +2,8 @@
 
 12 test cases has been implemented by Cypress test automation framework.
 
+Please find test run [video](https://github.com/brobee/docler/blob/master/Video/Docler%20POC%20automation.mov) in Video folder. 
+
 ## Installing Cypress
 To run this project, install cypress locally using npm:
 
