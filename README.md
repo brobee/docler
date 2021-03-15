@@ -52,5 +52,5 @@ This command runs all '@moderate' tagged test scripts.
 - easy to maintain
 - easy to read and understand the business flows
 
-###NOTE:
+### NOTE:
 Page Object Model and feature files structure can be varied. I chose simplicity, one single feature file contains all the required test cases however it can be restructured - for instance - by page like homepage.feature, formpage.feature, errorpage.feature. In this case we can use more Cucumber advantages like scenario outline or Background.
