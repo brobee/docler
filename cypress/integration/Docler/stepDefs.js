@@ -34,12 +34,20 @@ Then('The Company Logo appears on the page', () => {
     helpers.validateCompanyLogo()
 })
 
-Then('Home page appears and Home turns to active status', () => {
-    homePage.validateHomePageIsActive()
+Then('Home page is displayed', () => {
+    homePage.isLoaded()
 })
 
-Then('Form page appears and Form turns to active status',() => {
-    formPage.validateFormPageIsActive()
+Then('Home button turns to active status', () => {
+    homePage.validateHomeIsActive()
+})
+
+Then('Form page is displayed',() => {
+    formPage.isLoaded()
+})
+
+Then('Form button turns to active status',() => {
+    formPage.validateFormIsActive()
 })
 
 Then('I get {string} HTTP response code', (responseCode) => {
@@ -57,19 +65,17 @@ Then('I am navigated to the Home Page', () => {
     homePage.isLoaded()
 })
 
-When('the homepage has loaded', () => {
-    homePage.isLoaded()
-});
-
 Then('All mandatory elements are visible on the Homepage', () => {
     homePage.validateAllElementsOnHomepage()
+    //I validate all the elements in one shot, not only h1. If you want to validate only h1 tag. please use the method below:
+    //homePage.validateH1Tag()
 });
 
 Given('I navigate to the Form Page', () => {
     navigateTo.formPage()
 });
 
-Then('I can see All mandatory elements are visible on the Form page', () => {
+Then('All mandatory elements are visible on the Form page', () => {
     formPage.validateAllElementsOnFormPage()
 })
 When('I navigate to the Error Page', () => {
@@ -94,5 +100,5 @@ When('I type in these values and submit the form', (dataTable) => {
 })
 
 Then('I am redirected to the Hello Page and proper message appears', () => {
-
+    //See when step. 
 })

@@ -16,7 +16,7 @@ const navbarLenght = 3;
 
 export class HomePage {
 
-    validateHomePageIsActive() {
+    validateHomeIsActive() {
         cy.get('a[id="home"]').parent('li').should('have.class','active')
         cy.get('#form').parent('li').should('not.have.class','active')
         cy.get('#error').parent('li').should('not.have.class','active')
@@ -42,6 +42,14 @@ export class HomePage {
             cy.get(Selectors.companyLogo).should('be.visible')
         })
 
+    }
+
+    validateH1Tag() {
+        cy.get(Selectors.h1Tag).contains(constants.homePageH1)
+    }
+
+    validatePTag() {
+        cy.get(Selectors.pText).contains(constants.homePagePText)
     }
 }
 

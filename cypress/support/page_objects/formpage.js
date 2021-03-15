@@ -9,8 +9,8 @@ const Selectors = {
 }
 
 export class FormPage {
-
-    validateFormPageIsActive() {
+    
+    validateFormIsActive() {
         cy.get('a[id="home"]').parent('li').should('not.have.class','active')
         cy.get('#form').parent('li').should('have.class','active')
         cy.get('#error').parent('li').should('not.have.class','active')
@@ -24,6 +24,13 @@ export class FormPage {
             cy.get(Selectors.companyLogo).should('be.visible')
         })
     }
+
+    isLoaded() {
+        cy.get(Selectors.h1Tag).contains(constants.formH1)
+        cy.get(Selectors.formInput).should('be.visible')
+        cy.get(Selectors.formButton).should('be.visible')
+    }
+
     formSubmit(text) {
         cy.get(Selectors.formInput).clear().type(text)
         cy.get(Selectors.formButton).click()
