@@ -5,8 +5,17 @@
 Please find test run [video](https://github.com/brobee/docler/blob/master/Video/Docler%20POC%20automation.mov) in Video folder. 
 
 ## Installing Cypress
+
+Short and simple way in the cloned folder.
+
+```
+npm install 
+```
+package.json contains all the required dependencies for Cypress. However in some cases it can be fragile and gives permission error. As per my experience, less fragile way is pure install based on official documentation.
+
 To run this project, install cypress locally using npm:
 
+Run the following command in the cloned directory to install cypress:
 ```
 npm install cypress --save-dev
 ```
